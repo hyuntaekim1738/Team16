@@ -75,7 +75,6 @@ public class TimeTravelConfirmationMessage : MonoBehaviour
 
     public void Confirm()
     {
-        Debug.Log("CONFIRMING, targetScene = '" + targetScene + "'");
         SceneManager.LoadScene(targetScene);
     }
 
@@ -94,7 +93,6 @@ public class TimeTravelConfirmationMessage : MonoBehaviour
 
         confirmButton.colors = (selectedIndex == 0) ? selected : normal;
         cancelButton.colors = (selectedIndex == 1) ? selected : normal;
-        Debug.Log(selectedIndex);
     }
 
 }
