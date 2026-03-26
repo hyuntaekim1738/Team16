@@ -41,7 +41,7 @@ public class TimeTravelConfirmationMessage : MonoBehaviour
             UpdateButtonHighlight();
         }
 
-        if ( Input.GetKeyDown(KeyCode.B)) //Input.GetButtonDown("js0") ||
+        if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B)) //Input.GetButtonDown("js0") ||
         {
             if (selectedIndex == 0)
             {
