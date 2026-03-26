@@ -16,6 +16,10 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         charCntrl = GetComponent<CharacterController>();
+        if (PlayerPrefs.HasKey("playerSpeed"))
+        {
+            speed = PlayerPrefs.GetFloat("playerSpeed");
+        }
     }
 
     // Update is called once per frame
