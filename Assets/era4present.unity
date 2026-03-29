@@ -2021,7 +2021,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
   speed: 5
   cameraObj: {fileID: 362146786}
-  joyStickMode: 0
+  joyStickMode: 1
 --- !u!143 &1926121751
 CharacterController:
   m_ObjectHideFlags: 0
