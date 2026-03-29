@@ -15,13 +15,22 @@ public class BinocularsOverlay : MonoBehaviour
     private float[] zooms = { 60f, 40f, 30f, 20f };
     private int zoomIndex;
     private int selectedIndex;
+    private RenderTexture zoomRT;
 
     public Button zoomButton;
     public Button closeButton;
     public CharacterMovement characterScript;
     public CameraOperations cameraScript;
     public Camera mainCamera;
+    public Camera zoomCamera;
     public GameObject binocularStand;
+    public RawImage zoomDisplay;
+
+    void Awake()
+    {
+        zoomRT = new RenderTexture(1024, 512, 24);
+        zoomRT.Create();
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -63,6 +72,11 @@ public class BinocularsOverlay : MonoBehaviour
 
     void OnEnable()
     {
+        zoomCamera.stereoTargetEye = StereoTargetEyeMask.None;
+        zoomCamera.targetTexture = zoomRT;
+        zoomDisplay.texture = zoomRT;
+        zoomCamera.enabled = true;
+        zoomDisplay.enabled = true;
         zoomIndex = 0;
         selectedIndex = 0;
         UpdateButtonHighlight();
@@ -74,16 +88,18 @@ public class BinocularsOverlay : MonoBehaviour
 
     void OnDisable()
     {
+        zoomCamera.enabled = false;
+        zoomCamera.targetTexture = null;
+        zoomDisplay.enabled = false;
         binocularStand.SetActive(true);
         characterScript.enabled = true;
         cameraScript.enabled = true;
-        // reset zoom
-        mainCamera.fieldOfView = 60f;
+        zoomCamera.enabled = false;
     }
 
     void UpdateZoom()
     {
-        mainCamera.fieldOfView = zooms[zoomIndex];
+        zoomCamera.fieldOfView = zooms[zoomIndex];
         zoomButton.GetComponentInChildren<TMP_Text>().text = "Zoom: " + zoomMappings[zooms[zoomIndex]];
     }
 

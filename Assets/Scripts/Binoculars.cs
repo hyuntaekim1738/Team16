@@ -12,7 +12,6 @@ public class Binoculars : MonoBehaviour
         outline = gameObject.GetComponent<Outline>();
         outline.enabled = false;
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -22,12 +21,18 @@ public class Binoculars : MonoBehaviour
             if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
             {
                 binocularsOverlay.SetActive(true);
+                outline.enabled = false;
             }
         }
         else
         {
             outline.enabled = false;
         }
+    }
+
+    void OnEnable()
+    {
+        pointerIn = false;
     }
 
     public void OnPointerEnter()
