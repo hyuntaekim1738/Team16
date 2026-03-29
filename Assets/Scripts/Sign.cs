@@ -6,6 +6,8 @@ public class Sign : MonoBehaviour
 {
     private bool pointerIn = false;
     private float minDistance = 2.5f;
+    private Outline outline;
+
     public bool signExpanded;
     public GameObject expandedSign;
     public string signTitle;
@@ -20,6 +22,8 @@ public class Sign : MonoBehaviour
         signExpanded = false;
         titleText.text = signTitle;
         descriptionText.text = signDescription;
+        outline = gameObject.GetComponent<Outline>();
+        outline.enabled = false;
     }
 
     // Update is called once per frame
@@ -32,6 +36,7 @@ public class Sign : MonoBehaviour
 
         if (pointerIn)
         {
+            outline.enabled = true;
             Transform cam = Camera.main.transform;
             float distance = Vector3.Distance(cam.position, transform.position);
 
@@ -44,8 +49,13 @@ public class Sign : MonoBehaviour
 
                     expandedSign.SetActive(true);
                     signExpanded = true;
+                    outline.enabled = false;
                 }
             }
+        }
+        else
+        {
+            outline.enabled = false;
         }
     }
 
