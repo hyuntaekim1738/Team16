@@ -34,18 +34,18 @@ public class Animal : MonoBehaviour
             if (isPointerEnter)
             {
                 gameObject.GetComponent<Outline>().enabled = true;
-                if (Input.GetButton("js5"))
+                if (Input.GetButton("js1"))
                 {
                     if(!feeding){
-                        Debug.Log("hi ");
+                        // Debug.Log("hi ");
                         menu.SetActive(true);
                         isMenuOpen = true;
                         character.GetComponent<CharacterMovement>().enabled = false;
                     }
                     else if (feedingDone || feedingDoneL)
                     {
-                        Debug.Log("hi done");
-                        if (Input.GetButtonDown("js5"))
+                        // Debug.Log("hi done");
+                        if (Input.GetButtonDown("js1"))
                         {
                             menu.SetActive(true);
                             isMenuOpen = true;

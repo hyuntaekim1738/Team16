@@ -22,7 +22,7 @@ public class ExitMenuButton : MonoBehaviour
         {
             menuClosed = false;
             b.GetComponent<Image>().color = new Color(255,255,0);
-            if (Input.GetButtonDown("js5"))
+            if (Input.GetButtonDown("js1"))
             {
                 menu.SetActive(false);
                 character.GetComponent<CharacterMovement>().enabled = true;

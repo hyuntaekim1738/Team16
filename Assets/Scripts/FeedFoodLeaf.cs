@@ -21,7 +21,7 @@ public class FeedFoodLeaf : MonoBehaviour
         {
             if (hit.collider.tag.Equals("Buffalo") && foodPickUp())
             {
-                if (Input.GetButtonDown("js5"))
+                if (Input.GetButtonDown("js1"))
                 {
                     feeding = true;
                     gameObject.SetActive(false);

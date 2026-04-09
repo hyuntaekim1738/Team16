@@ -20,7 +20,7 @@ public class FeedFood : MonoBehaviour
         {
             if (hit.collider.tag.Equals("Wolf") && foodPickUp())
             {
-                if (Input.GetButtonDown("js5"))
+                if (Input.GetButtonDown("js1"))
                 {
                     feeding = true;
                     // menu.SetActive(false);

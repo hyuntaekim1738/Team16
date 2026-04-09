@@ -20,7 +20,7 @@ public class Food : MonoBehaviour
         if(isPointerEnter)
         {
             gameObject.GetComponent<Outline>().enabled = true;
-            if (Input.GetButtonDown("js5"))
+            if (Input.GetButtonDown("js1"))
             {
                 // setFeedFood(true);
                 foodPickedUp = true;
