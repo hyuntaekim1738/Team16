@@ -4,7 +4,6 @@ public class Binoculars : MonoBehaviour
 {
     private Outline outline;
     private bool pointerIn;
-    private float interactRange = 5f;
 
     public GameObject binocularsOverlay;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -16,9 +15,7 @@ public class Binoculars : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, Camera.main.transform.position);
-        bool inRange = distance <= interactRange;
-        if (pointerIn && inRange)
+        if (pointerIn)
         {
             outline.enabled = true;
             if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
