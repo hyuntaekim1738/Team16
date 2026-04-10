@@ -34,7 +34,7 @@ public class RangerMenuUI : MonoBehaviour
     [TextArea(3, 8)]
     public string buildingsResponse;
 
-    private string rangerApiUrl = "http://ip-address:3000/ask-ranger";
+    private string rangerApiUrl = "http://192.168.1.154:3000/ask-ranger";
 
     void OnEnable()
     {
