@@ -55,3 +55,4 @@ The user can teleport around the environment by pointing at the green plane on t
 Users can open a settings menu by pressing the 3 lined button on the controller. This will open a menu that displays the controls and has various menu options that are clearly labelled. Users can navigate the menu by using the joystick and pressing "B" on the desired options.
 ## Youtube Link
 Here is a link containing a demo to our project!
+https://youtu.be/jmDlG8dvXZY
