@@ -7392,6 +7392,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 310849504878978324, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4072316406956748396, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8
@@ -7440,9 +7444,33 @@ PrefabInstance:
       propertyPath: characterScript
       value: 
       objectReference: {fileID: 1926121750}
+    - target: {fileID: 6000595890140354486, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6361999466966874925, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
       propertyPath: m_Name
       value: ParkRanger_Era4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819575029606838413, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_Size.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6819575029606838413, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_Size.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715808909995154268, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.b
+      value: 0.16820934
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715808909995154268, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.g
+      value: 0.7689171
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715808909995154268, guid: baf72c133eb8f42cea327be37e703c86, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.r
+      value: 0.7924528
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
