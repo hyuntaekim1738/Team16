@@ -152,7 +152,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000011262040222, guid: 196fe542ad163b149adf1ca04c19c753, type: 3}
       propertyPath: m_Name
-      value: Salad
+      value: Leaf (Buffalo)
       objectReference: {fileID: 0}
     - target: {fileID: 1000011262040222, guid: 196fe542ad163b149adf1ca04c19c753, type: 3}
       propertyPath: m_IsActive
@@ -1439,7 +1439,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1000011546679732, guid: c50664c203e2d3d4bbe40a0ffea7d149, type: 3}
       propertyPath: m_Name
-      value: Steak_Uncooked
+      value: Steak (Wolf)
       objectReference: {fileID: 0}
     - target: {fileID: 1000011546679732, guid: c50664c203e2d3d4bbe40a0ffea7d149, type: 3}
       propertyPath: m_IsActive
@@ -3238,7 +3238,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917631739}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -227.47}
+  m_LocalPosition: {x: 0, y: 0, z: -226.99}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3246,7 +3246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.25, y: -2.48}
+  m_AnchoredPosition: {x: 1.5, y: -2.86}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &917631741
@@ -3478,6 +3478,7 @@ GameObject:
   - component: {fileID: 1029704703}
   - component: {fileID: 1029704702}
   - component: {fileID: 1029704701}
+  - component: {fileID: 1029704707}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3600,9 +3601,21 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.067, y: 0.09464884}
+  m_AnchoredPosition: {x: 0.067, y: 0.125}
   m_SizeDelta: {x: 538.99994, y: 306}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1029704707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029704700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60df1d83214e49ecb4569c2c918cb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &1035806263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4088,7 +4101,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211428283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -227.47}
+  m_LocalPosition: {x: 0, y: 0, z: -227.04}
   m_LocalScale: {x: 0.009997743, y: 0.009997743, z: 0.009997743}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4096,7 +4109,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.57, y: -2.4799998}
+  m_AnchoredPosition: {x: -0.57, y: -2.87}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211428285
@@ -4352,6 +4365,7 @@ GameObject:
   - component: {fileID: 1240801353}
   - component: {fileID: 1240801352}
   - component: {fileID: 1240801357}
+  - component: {fileID: 1240801358}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4477,6 +4491,18 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
+--- !u!114 &1240801358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1240801351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60df1d83214e49ecb4569c2c918cb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimalMenu
 --- !u!4 &1259396536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7448873697391259988, guid: 50738ee6476c64c4c9480996d9dd1333, type: 3}
@@ -6461,6 +6487,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Animal
   menu: {fileID: 1298486668}
   character: {fileID: 1926121749}
+  camera: {fileID: 0}
 --- !u!114 &2001585144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6566,7 +6593,7 @@ GameObject:
   - component: {fileID: 33000010741646022}
   - component: {fileID: 33000010741646021}
   m_Layer: 0
-  m_Name: Salad
+  m_Name: Leaf (Buffalo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6588,7 +6615,7 @@ GameObject:
   - component: {fileID: 33000013029573280}
   - component: {fileID: 33000013029573283}
   m_Layer: 0
-  m_Name: Steak_Uncooked
+  m_Name: Steak (Wolf)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6982,7 +7009,7 @@ GameObject:
   - component: {fileID: 890758083487048956}
   - component: {fileID: 890758083487048957}
   m_Layer: 0
-  m_Name: Wolf_v1
+  m_Name: Wolf (era1)
   m_TagString: Wolf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10037,6 +10064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   menu: {fileID: 1240801351}
   character: {fileID: 1926121749}
+  camera: {fileID: 362146786}
 --- !u!114 &890758083487048956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24331,10 +24359,11 @@ GameObject:
   - component: {fileID: 5519247393197168836}
   - component: {fileID: 5519247393197168838}
   - component: {fileID: 5519247393197168837}
+  - component: {fileID: 5519247393197168841}
   - component: {fileID: 5519247393197168839}
   - component: {fileID: 5519247393197168840}
   m_Layer: 0
-  m_Name: Buffalo_v1
+  m_Name: Buffalo (era1)
   m_TagString: Buffalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27386,13 +27415,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4636780802501651206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fe4741a70d184ac89a0daafdaa5cb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Animal
   menu: {fileID: 1029704700}
   character: {fileID: 1926121749}
+  camera: {fileID: 0}
 --- !u!114 &5519247393197168838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27410,8 +27440,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5519247393197168837}
-          m_TargetAssemblyTypeName: Animal, Assembly-CSharp
+        - m_Target: {fileID: 5519247393197168841}
+          m_TargetAssemblyTypeName: AnimalBuffalo, Assembly-CSharp
           m_MethodName: OnPointerEnter
           m_Mode: 1
           m_Arguments:
@@ -27426,8 +27456,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 5519247393197168837}
-          m_TargetAssemblyTypeName: Animal, Assembly-CSharp
+        - m_Target: {fileID: 5519247393197168841}
+          m_TargetAssemblyTypeName: AnimalBuffalo, Assembly-CSharp
           m_MethodName: OnPointerExit
           m_Mode: 1
           m_Arguments:
@@ -27477,6 +27507,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.051166978, y: 0.09679963, z: 0.16585766}
   m_Center: {x: 0.0010265064, y: 0.050973646, z: 0.023775911}
+--- !u!114 &5519247393197168841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4636780802501651206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3c28f9a2973e4654acd67d147516a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  menu: {fileID: 1029704700}
+  character: {fileID: 1926121749}
+  camera: {fileID: 362146786}
 --- !u!4 &5523367671180058654
 Transform:
   m_ObjectHideFlags: 0
