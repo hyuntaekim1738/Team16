@@ -34,8 +34,7 @@ public class RangerMenuUI : MonoBehaviour
     [TextArea(3, 8)]
     public string buildingsResponse;
 
-    [Header("Backend API")]
-    public string rangerApiUrl = "http://localhost:3000/ask-ranger";
+    private string rangerApiUrl = "http://ip-address:3000/ask-ranger";
 
     void OnEnable()
     {
@@ -69,6 +68,8 @@ public class RangerMenuUI : MonoBehaviour
             cameraScript.enabled = false;
         }
     }
+
+
 
     public void ShowHistory()
     {
@@ -145,7 +146,7 @@ public class RangerMenuUI : MonoBehaviour
 
         StartCoroutine(SendQuestionToRanger(userQuestion));
     }
-
+    
     private IEnumerator SendQuestionToRanger(string userQuestion)
     {
         responseText.text = "Ranger is thinking...";

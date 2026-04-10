@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+import fetch from "node-fetch";
 
 dotenv.config();
 
@@ -17,6 +18,8 @@ app.get("/health", (req, res) => {
 });
 
 app.post("/ask-ranger", async (req, res) => {
+  console.log("ask-ranger hit:", req.body);
+
   try {
     const { eraName, question } = req.body ?? {};
 

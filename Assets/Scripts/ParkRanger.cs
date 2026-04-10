@@ -29,6 +29,7 @@ public class ParkRanger : MonoBehaviour
             {
                 if (rangerMenu != null)
                 {
+                    rangerMenu.transform.rotation = Quaternion.LookRotation(rangerMenu.transform.position - Camera.main.transform.position);
                     rangerMenu.SetActive(true);
                     outline.enabled = false;
                 }
