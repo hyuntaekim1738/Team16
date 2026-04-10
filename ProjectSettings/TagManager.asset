@@ -7,6 +7,8 @@ TagManager:
   - Destroyable
   - Ground
   - MenuButton
+  - Wolf
+  - Buffalo
   layers:
   - Default
   - TransparentFX
