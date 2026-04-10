@@ -8,23 +8,24 @@ The project is contained in the scenes:
 startScene.unity is the landing scene that contains the title screen. Once the user 
 clicks to bypass the screen, it lands on era4present.unity. Users can switch between era4present.unity and era1origin.unity using the time travel feature.
 ## Setup Guide
-Target Device is standard Android/Google Cardboard setup. To use the Ranger AI project requires setting up a connection to Gemini API. If these setup steps are skipped, the VR application will run, and the only feature that won't work is the Gemini API calling, but the application is robust enough to handle the error.
-Create your Gemini API Key
+Target Device is standard Android/Google Cardboard setup. To use the Ranger AI project requires setting up a connection to Gemini API. If these setup steps are skipped, the VR application will run, and the only feature that won't work is the Gemini API calling, but the application is robust enough to handle the error.  
+#### Create your Gemini API Key
 - Navigate to https://aistudio.google.com/api-keys
 - This might require a login if you are not already logged into Google
 - In the top right click "Create API Key"
 - The API key requires a project. Click the "Create Project" Option and name it whatever you want. Assign it to the key.
-- Copy the API key
-Add API information to the server.
+- Copy the API key  
+#### Add API information to the server.
 - In the Team16 repo, navigate to Team16/yellowstone-ranger-api/.env
 - In the line that says "GEMINI_API_KEY=API_KEY_HERE", replace API_KEY_HERE with your API key
 - In the commandline, navigate to Team16/yellowstone-ranger-api and run "npm install"
-- Once that it is complete, run "node server.js". Keep the server running
-Add IP information to the Unity application
+- Once that it is complete, run "node server.js". Keep the server running  
+#### Add IP information to the Unity application
 - Navigate to Team16/Assets/Scripts/RangerMenuUI.cs
 - Line 37 looks like this: private string rangerApiUrl = "http://IP-HERE:3000/ask-ranger";
 - Replace IP-HERE with the IP address of the device that is running the server
 - Ensure that the Android device and the server running device are on the same internet network.
+  
 Once these steps have been completed, rebuild the application, keep the server running, and all features should work normally.
 ## Github Link
 https://github.com/hyuntaekim1738/Team16
