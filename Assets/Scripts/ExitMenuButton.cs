@@ -7,6 +7,7 @@ public class ExitMenuButton : MonoBehaviour
     public GameObject menu;
     public Button b;
     public GameObject character;
+    public GameObject camera;
     bool isPointerEnter = false;
     static bool menuClosed = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +27,7 @@ public class ExitMenuButton : MonoBehaviour
             {
                 menu.SetActive(false);
                 character.GetComponent<CharacterMovement>().enabled = true;
+                camera.GetComponent<CameraOperations>().enabled = true;
                 menuClosed = true;
             }
         }

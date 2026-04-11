@@ -1,7 +1,7 @@
 using UnityEngine;
 using static ExitMenuButton;
 using static FeedFood;
-using static Food;
+using static FoodLeaf;
 using static FeedFoodLeaf;
 public class AnimalBuffalo : MonoBehaviour
 {
@@ -22,7 +22,7 @@ public class AnimalBuffalo : MonoBehaviour
     void Update()
     {
         feeding = foodPickUp();
-        feedingDone = getFeedFood();
+        // feedingDone = getFeedFood();
         feedingDoneL = getFeedFoodL();
         if (isPointerEnter)
             {
@@ -30,7 +30,7 @@ public class AnimalBuffalo : MonoBehaviour
                 if (Input.GetButton("js1"))
                 {   
                     if(!feeding){
-                        // Debug.Log("menu open");
+                        Debug.Log("menu open");
                         menu.SetActive(true);
                         isMenuOpen = true;
                         character.GetComponent<CharacterMovement>().enabled = false;
@@ -38,7 +38,7 @@ public class AnimalBuffalo : MonoBehaviour
                     }
                     else if (feedingDoneL)
                     {
-                        // Debug.Log("leaf done");
+                        Debug.Log("leaf done");
                         feeding = foodPickUp();
                             if (Input.GetButtonDown("js1"))
                             {
@@ -48,6 +48,11 @@ public class AnimalBuffalo : MonoBehaviour
                                 camera.GetComponent<CameraOperations>().enabled = false;
                             }
                     }
+                    // else if (feedingDone)
+                    // {
+                    //     menu.SetActive(true);
+                    //     isMenuOpen = true;
+                    // }
                 }
             }
         else

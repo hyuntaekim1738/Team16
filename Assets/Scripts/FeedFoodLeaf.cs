@@ -1,16 +1,16 @@
 using UnityEngine;
-using static Food;
+using static FoodLeaf;
 
 public class FeedFoodLeaf : MonoBehaviour
 {
     Ray ray;
     RaycastHit hit;
-    public GameObject menu;
+    // public GameObject menu;
     static bool feeding;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        feeding = false;
     }
 
     // Update is called once per frame
@@ -27,6 +27,12 @@ public class FeedFoodLeaf : MonoBehaviour
                     gameObject.SetActive(false);
                 }
             }
+            // else if (hit.collider.tag.Equals("Wolf") && foodPickUp())
+            // {
+            //     // Debug.Log("Wrong Animal");
+            //     if (Input.GetButtonDown("js1"))
+            //         feeding = false;
+            // }
         }
     }
 
