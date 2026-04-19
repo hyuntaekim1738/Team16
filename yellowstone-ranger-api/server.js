@@ -21,14 +21,17 @@ app.post("/ask-ranger", async (req, res) => {
   console.log("ask-ranger hit:", req.body);
 
   try {
-    const { eraName, question } = req.body ?? {};
-
+    const { eraName, question, history } = req.body ?? {};
+    const historyText = (history ?? [])
+      .map(turn => `${turn.role === "user" ? "Visitor" : "Ranger"}: ${turn.text}`)
+      .join("\n");
     if (!eraName || !question) {
       return res.status(400).json({
         ok: false,
         error: "Missing eraName or question."
       });
     }
+    
 
     const prompt = `
 You are a Park Ranger at Yellowstone National Park during this era: ${eraName}.
@@ -44,6 +47,7 @@ Rules:
 - Stay historically grounded to the specified era.
 - Be clear, friendly, and educational.
 - If the visitor asks something outside the era, gently redirect the answer back to what is true in this era.
+${historyText ? `Previous conversation:\n${historyText}\n` : ""}
 
 Visitor question:
 ${question}
