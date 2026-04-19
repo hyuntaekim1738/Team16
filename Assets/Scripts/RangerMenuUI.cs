@@ -2,9 +2,13 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
+using System.Collections.Generic;
+using System.Linq;
 
 public class RangerMenuUI : MonoBehaviour
 {
+    private List<ConversationTurn> conversationHistory = new List<ConversationTurn>();
+
     [Header("Main UI References")]
     public GameObject menuRoot;
     public GameObject mainMenuPanel;
@@ -159,7 +163,8 @@ public class RangerMenuUI : MonoBehaviour
         RangerRequestBody body = new RangerRequestBody
         {
             eraName = eraName,
-            question = userQuestion
+            question = userQuestion,
+            history = conversationHistory.TakeLast(10).ToArray()
         };
 
         string json = JsonUtility.ToJson(body);
@@ -185,6 +190,9 @@ public class RangerMenuUI : MonoBehaviour
                 if (response != null && response.ok)
                 {
                     responseText.text = response.answer;
+                    // remember the exchange
+                    conversationHistory.Add(new ConversationTurn {role = "user", text = userQuestion});
+                    conversationHistory.Add(new ConversationTurn {role = "ranger", text = response.answer});
                 }
                 else
                 {
@@ -255,10 +263,18 @@ public class RangerMenuUI : MonoBehaviour
 }
 
 [System.Serializable]
+public class ConversationTurn
+{
+    public string role;//user or ranger
+    public string text;
+}
+
+[System.Serializable]
 public class RangerRequestBody
 {
     public string eraName;
     public string question;
+    public ConversationTurn[] history;
 }
 
 [System.Serializable]
