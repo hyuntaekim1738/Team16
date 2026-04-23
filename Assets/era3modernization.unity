@@ -181,7 +181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2476260288133308686, guid: 7351f9f88827442c7a60c5549fe3a4b8, type: 3}
       propertyPath: isCurrentEra
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2476260288133308686, guid: 7351f9f88827442c7a60c5549fe3a4b8, type: 3}
       propertyPath: timeTravelConfirmationMessage
@@ -8711,7 +8711,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2476260288133308686, guid: 7351f9f88827442c7a60c5549fe3a4b8, type: 3}
       propertyPath: isCurrentEra
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2476260288133308686, guid: 7351f9f88827442c7a60c5549fe3a4b8, type: 3}
       propertyPath: timeTravelConfirmationMessage
