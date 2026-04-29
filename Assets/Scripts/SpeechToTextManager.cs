@@ -7,6 +7,7 @@ public class SpeechToTextManager : MonoBehaviour, ISpeechToTextListener
     public RangerMenuUI rangerMenuUI;
     public TMP_InputField questionInput;
     public TextMeshProUGUI responseText;
+    public ParkRangerAnimationController animationController;
 
     [Header("Settings")]
     public string languageCode = "en-US";
@@ -145,6 +146,10 @@ public class SpeechToTextManager : MonoBehaviour, ISpeechToTextListener
             if (autoSubmitAfterSpeech && rangerMenuUI != null)
             {
                 rangerMenuUI.SubmitSpeechQuestion(spokenText.Trim());
+            }
+            if (animationController != null)
+            {
+                animationController.PlayTalk();
             }
         }
         else

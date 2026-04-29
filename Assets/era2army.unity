@@ -1702,95 +1702,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471828, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   m_PrefabInstance: {fileID: 142594446}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &148405838
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 310849504878978324, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 755184803017881442, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896646814539141466, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4072316406956748396, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5544881211926733821, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: cameraScript
-      value: 
-      objectReference: {fileID: 362146807}
-    - target: {fileID: 5544881211926733821, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: characterScript
-      value: 
-      objectReference: {fileID: 1926121750}
-    - target: {fileID: 6361999466966874925, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_Name
-      value: ParkRanger_Era1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715808909995154268, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.b
-      value: 0.13510147
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715808909995154268, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.g
-      value: 0.8480529
-      objectReference: {fileID: 0}
-    - target: {fileID: 8715808909995154268, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
-      propertyPath: m_Colors.m_HighlightedColor.r
-      value: 0.8679245
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bb6e2fd34dbfe43ad871b40704bb0148, type: 3}
 --- !u!1001 &171179897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4683,6 +4594,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 471828, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
   m_PrefabInstance: {fileID: 488918643}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &490913942
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799234940440305938, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5096115154095988815, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
+      propertyPath: m_Name
+      value: ParkRanger_Era2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1a8ce54add9040e88c0b01c7b682c2e, type: 3}
 --- !u!1001 &493858259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22037,7 +22005,6 @@ SceneRoots:
   - {fileID: 1959437944}
   - {fileID: 911634343}
   - {fileID: 1642920586}
-  - {fileID: 148405838}
   - {fileID: 477385208}
   - {fileID: 809568244}
   - {fileID: 1078182209}
@@ -22046,3 +22013,4 @@ SceneRoots:
   - {fileID: 1096168577}
   - {fileID: 1216676229}
   - {fileID: 790698452}
+  - {fileID: 490913942}
