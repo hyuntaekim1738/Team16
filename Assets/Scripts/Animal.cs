@@ -3,7 +3,7 @@ using static ExitMenuButton;
 using static FeedFood;
 using static Food;
 using static FeedFoodLeaf;
-
+using static AnimalBuffalo;
 
 public class Animal : MonoBehaviour
 {
@@ -12,10 +12,9 @@ public class Animal : MonoBehaviour
     public GameObject menu;
     public GameObject character;
     public GameObject camera;
-    bool isPointerEnter = false;
-    bool isMenuOpen = false;
-    bool feeding = false;
-    bool feedingDone, feedingDoneL = false;
+    bool isPointerEnter, feeding, feedingDone = false;
+    public static bool isMenuOpen = false;
+    public static int foodNum = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,36 +25,29 @@ public class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // dis = Vector3.Distance(character.transform.position, transform.position);
         feeding = foodPickUp();
         feedingDone = getFeedFood();
-        feedingDoneL = getFeedFoodL();
-        // ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-        // if(Physics.Raycast(ray, out hit))
-        // {
+        // feedingDoneL = getFeedFoodL();
             if (isPointerEnter)
             {
+                if(isMenuOpenL || isMenuOpen) return;
                 gameObject.GetComponent<Outline>().enabled = true;
-                if (Input.GetButton("js1"))
+                if (Input.GetButtonDown("js1"))
                 {   
-                    if(!feeding){
-                        // Debug.Log("hi");
-                        menu.SetActive(true);
-                        isMenuOpen = true;
-                        character.GetComponent<CharacterMovement>().enabled = false;
-                        camera.GetComponent<CameraOperations>().enabled = false;
+                    if(!feeding && foodLeafNum == 0){ // if there is no food in hand
+                        OpenMenu();
                     }
-                    else if (feedingDone)
+                    else if (feedingDone && !isMenuOpen) // if feeding completed (to wolf)
                     {
-                        // Debug.Log("hi done");
-                        feeding = foodPickUp();
-                            if (Input.GetButtonDown("js1"))
+                            // feeding = foodPickUp();
+                            if (Input.GetButton("js1")) 
                             {
-                                menu.SetActive(true);
-                                isMenuOpen = true;
-                                character.GetComponent<CharacterMovement>().enabled = false;
-                                camera.GetComponent<CameraOperations>().enabled = false;
-                            }
-                            
+                                if(foodNum == 0 && foodLeafNum == 0){ // if there's no extra food
+                                    OpenMenu();
+                                    feedingDone = false;
+                                }
+                            } 
                     }
                 }
             }
@@ -68,21 +60,19 @@ public class Animal : MonoBehaviour
         {
             isMenuOpen = false;
         }
-        // feeding = getFeedFood();
-        // }
-        // else
-        // {
-        //     gameObject.GetComponent<Outline>().enabled = false;
-        // }
-        // }
+    }
+    void OpenMenu(){
+        menu.SetActive(true);
+        isMenuOpen = true;
+        character.GetComponent<CharacterMovement>().enabled = false;
+        camera.GetComponent<CameraOperations>().enabled = false;
     }
 
     public void OnPointerEnter()
     {
-        if(!isMenuOpen)
-            isPointerEnter = true;
-        // if (Input.GetButton("js5"))
-        //     menu.SetActive(true);
+        if(!isMenuOpen || animalMenuClosed())
+            // if(dis <= 7.0f)
+                isPointerEnter = true;
     }
 
     public void OnPointerExit()

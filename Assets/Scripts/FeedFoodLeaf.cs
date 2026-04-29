@@ -1,5 +1,6 @@
 using UnityEngine;
-using static Food;
+using static FoodLeaf;
+using static AnimalBuffalo;
 
 public class FeedFoodLeaf : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class FeedFoodLeaf : MonoBehaviour
                 if (Input.GetButtonDown("js1"))
                 {
                     feeding = true;
+                    foodLeafNum --;
                     gameObject.SetActive(false);
                 }
             }

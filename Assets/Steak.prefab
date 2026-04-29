@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6572301408991922681}
   - component: {fileID: 7099244913487440838}
   m_Layer: 0
-  m_Name: Steak (Wolf)
+  m_Name: Steak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

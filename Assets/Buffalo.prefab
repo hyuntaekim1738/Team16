@@ -6048,7 +6048,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: '
 
-    Bison were going extinct as they were being poached'
+    Bison have lived in the park since prehistoric times. They live
+    with herds and feed mainly on grass.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7289,7 +7290,7 @@ GameObject:
   - component: {fileID: 3256450548386481151}
   - component: {fileID: 793771004966477463}
   m_Layer: 0
-  m_Name: Buffalo (era1)
+  m_Name: Buffalo
   m_TagString: Buffalo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11263,7 +11264,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3647546319642128792}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.029}
+  m_LocalPosition: {x: 0, y: 0, z: 0.013}
   m_LocalScale: {x: 0.00016883113, y: 0.00016883116, z: 0.00016883113}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11274,7 +11275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.067, y: 0.125}
+  m_AnchoredPosition: {x: -0, y: 0.125}
   m_SizeDelta: {x: 538.99994, y: 306}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1821698712107342418
@@ -27790,6 +27791,7 @@ MonoBehaviour:
   menu: {fileID: 3647546319642128792}
   b: {fileID: 2248150567768446655}
   character: {fileID: 0}
+  cameraScript: {fileID: 0}
 --- !u!114 &7136947832893469005
 MonoBehaviour:
   m_ObjectHideFlags: 0
