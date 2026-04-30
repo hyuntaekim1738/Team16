@@ -1,5 +1,6 @@
 using UnityEngine;
 using static Food;
+using static Animal;
 public class FeedFood : MonoBehaviour
 {
     Ray ray;
@@ -24,6 +25,7 @@ public class FeedFood : MonoBehaviour
                 {
                     feeding = true;
                     // menu.SetActive(false);
+                    foodNum --;
                     gameObject.SetActive(false);
                 }
             }

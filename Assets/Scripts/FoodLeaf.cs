@@ -1,8 +1,7 @@
 using UnityEngine;
-using static FeedFood;
-using static Animal;
-
-public class Food : MonoBehaviour
+using static FeedFoodLeaf;
+using static AnimalBuffalo;
+public class FoodLeaf : MonoBehaviour
 {
     public GameObject curGameObject;
     public GameObject camGameObject;
@@ -25,7 +24,7 @@ public class Food : MonoBehaviour
             {
                 // setFeedFood(true);
                 foodPickedUp = true;
-                foodNum++;
+                foodLeafNum ++;
                 camGameObject.SetActive(true);
                 curGameObject.SetActive(false);
             }

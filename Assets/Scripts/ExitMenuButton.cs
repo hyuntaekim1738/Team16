@@ -19,16 +19,16 @@ public class ExitMenuButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        menuClosed = false;
         if(isPointerEnter)
         {
-            menuClosed = false;
             b.GetComponent<Image>().color = new Color(255,255,0);
             if (Input.GetButtonDown("js1"))
             {
-                menu.SetActive(false);
                 character.GetComponent<CharacterMovement>().enabled = true;
                 cameraScript.enabled = true;
                 menuClosed = true;
+                menu.SetActive(false);
             }
         }
         else
@@ -37,6 +37,7 @@ public class ExitMenuButton : MonoBehaviour
                 b.GetComponent<Image>().color = new Color(255,255,255);
             }
         }
+        // Debug.Log("MENU CLOSED? " + menuClosed);
     }
 
     public void OnPointerEnter()
