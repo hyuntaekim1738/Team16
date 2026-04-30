@@ -16,6 +16,7 @@ public class BinocularsOverlay : MonoBehaviour
     private int zoomIndex;
     private int selectedIndex;
     private RenderTexture zoomRT;
+    private int prevIndex;
 
     public Button zoomButton;
     public Button closeButton;
@@ -79,6 +80,7 @@ public class BinocularsOverlay : MonoBehaviour
         zoomDisplay.enabled = true;
         zoomIndex = 0;
         selectedIndex = 0;
+        prevIndex = 0;
         UpdateButtonHighlight();
         UpdateZoom();
         binocularStand.SetActive(false);
@@ -88,6 +90,7 @@ public class BinocularsOverlay : MonoBehaviour
 
     void OnDisable()
     {
+        AudioManager.Instance.PlayClick();
         zoomCamera.enabled = false;
         zoomCamera.targetTexture = null;
         zoomDisplay.enabled = false;
@@ -99,6 +102,7 @@ public class BinocularsOverlay : MonoBehaviour
 
     void UpdateZoom()
     {
+        AudioManager.Instance.PlayClick();
         zoomCamera.fieldOfView = zooms[zoomIndex];
         zoomButton.GetComponentInChildren<TMP_Text>().text = "Zoom: " + zoomMappings[zooms[zoomIndex]];
     }
@@ -111,6 +115,11 @@ public class BinocularsOverlay : MonoBehaviour
 
     void UpdateButtonHighlight()
     {
+        if (prevIndex != selectedIndex)
+        {
+            prevIndex = selectedIndex;
+            AudioManager.Instance.PlayHighlight();
+        }
         ColorBlock selected = ColorBlock.defaultColorBlock;
         selected.normalColor = Color.yellow;
 

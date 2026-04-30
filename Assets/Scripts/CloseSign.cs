@@ -23,19 +23,28 @@ public class CloseSign : MonoBehaviour
         {
             if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
             {
-                signScript.signExpanded = false;
-                expandedSign.SetActive(false);
-                characterScript.enabled = true;
-                cameraScript.enabled = true;
+                gameObject.SetActive(false);
             }
         }
     }
 
     void OnEnable()
     {
+        AudioManager.Instance.PlayClick();
         characterScript.enabled = false;
         cameraScript.enabled = false;
+        pointerIn = false;
         gameObject.GetComponent<Image>().color = Color.white;
+    }
+
+    void OnDisable()
+    {
+        gameObject.GetComponent<Image>().color = Color.white;
+        AudioManager.Instance.PlayClick();
+        signScript.signExpanded = false;
+        expandedSign.SetActive(false);
+        characterScript.enabled = true;
+        cameraScript.enabled = true;
     }
 
     public void OnPointerEnter()
@@ -43,11 +52,13 @@ public class CloseSign : MonoBehaviour
         gameObject.GetComponent<Image>().color = Color.yellow;
         
         pointerIn = true;
+        AudioManager.Instance.PlayHighlight();
     }
 
     public void OnPointerExit()
     {
         pointerIn = false;
         gameObject.GetComponent<Image>().color = Color.white;
+        AudioManager.Instance.PlayUnhighlight();
     }
 }

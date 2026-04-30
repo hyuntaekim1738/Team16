@@ -38,10 +38,12 @@ public class Binoculars : MonoBehaviour
     public void OnPointerEnter()
     {
         pointerIn = true;
+        AudioManager.Instance.PlayHighlight();
     }
 
     public void OnPointerExit()
     {
         pointerIn = false;
+        AudioManager.Instance.PlayUnhighlight();
     }
 }

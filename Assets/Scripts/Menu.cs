@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Menu : MonoBehaviour
 {
     private int selectedIndex;
+    private int prevSelected;
 
     public CharacterMovement characterScript;
     public Button resumeButton;
@@ -36,6 +37,7 @@ public class Menu : MonoBehaviour
 
         if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
         {
+            AudioManager.Instance.PlayClick();
             if (selectedIndex == 0)
             {
                 Resume();
@@ -51,6 +53,7 @@ public class Menu : MonoBehaviour
     void OnEnable()
     {
         selectedIndex = 0;
+        prevSelected = 1;
         UpdateButtonHighlight();
         characterScript.enabled = false;
         cameraScript.enabled = false;
@@ -71,6 +74,11 @@ public class Menu : MonoBehaviour
 
     void UpdateButtonHighlight()
     {
+        if (prevSelected != selectedIndex)
+        {
+            AudioManager.Instance.PlayHighlight();
+            prevSelected = selectedIndex;
+        }
         ColorBlock selected = ColorBlock.defaultColorBlock;
         selected.normalColor = Color.yellow;
 

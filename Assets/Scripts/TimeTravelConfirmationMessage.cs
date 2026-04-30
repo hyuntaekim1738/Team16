@@ -2,18 +2,22 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using System.Collections;
 
 public class TimeTravelConfirmationMessage : MonoBehaviour
 {
     private string targetScene;
-    private int selectedIndex = 0;
+    private int selectedIndex;
+    private int prevSelected;
 
     public TextMeshProUGUI eraText;
     public CharacterMovement characterScript;
     public Button confirmButton;
     public Button cancelButton;
     public bool joyStickMode;
-
+    //for the transition
+    public Image fadeImage;
+    public float fadeDuration = 0.8f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,6 +62,9 @@ public class TimeTravelConfirmationMessage : MonoBehaviour
     void OnEnable()
     {
         characterScript.enabled = false;
+        selectedIndex = 0;
+        prevSelected = 0;
+        UpdateButtonHighlight();
     }
 
     void OnDisable()
@@ -75,16 +82,44 @@ public class TimeTravelConfirmationMessage : MonoBehaviour
 
     public void Confirm()
     {
+        AudioManager.Instance.PlayTimeTravel();
+        StartCoroutine(FadeAndLoad());
+    }
+
+    private IEnumerator FadeAndLoad()
+    {
+        enabled = false;
+
+        float elapsed = 0f;
+        Color c = fadeImage.color;
+        Debug.Log("Fade started, initial alpha: " + c.a);
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Lerp(0f, 1f, elapsed / fadeDuration);
+            Debug.Log("Fade going, alpha: " + c.a);
+            fadeImage.color = c;
+            yield return null;
+        }
+
+        c.a = 1f;
+        fadeImage.color = c;
         SceneManager.LoadScene(targetScene);
     }
 
     public void Cancel()
     {
+        AudioManager.Instance.PlayClick();
         gameObject.SetActive(false);
     }
 
     void UpdateButtonHighlight()
     {
+        if (prevSelected != selectedIndex)
+        {
+            AudioManager.Instance.PlayHighlight();
+            prevSelected = selectedIndex;
+        }
         ColorBlock selected = ColorBlock.defaultColorBlock;
         selected.normalColor = Color.yellow;
 
