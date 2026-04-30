@@ -10,6 +10,7 @@ public class Sign : MonoBehaviour
 
     public bool signExpanded;
     public GameObject expandedSign;
+    public Button closeButton;
     public string signTitle;
     public string signDescription;
     public TextMeshPro titleText;
@@ -24,6 +25,8 @@ public class Sign : MonoBehaviour
         descriptionText.text = signDescription;
         outline = gameObject.GetComponent<Outline>();
         outline.enabled = false;
+        closeButton = expandedSign.GetComponentInChildren<Button>();
+        closeButton.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +51,7 @@ public class Sign : MonoBehaviour
                     expandedSign.transform.rotation = Quaternion.LookRotation(cam.forward);
 
                     expandedSign.SetActive(true);
+                    closeButton.gameObject.SetActive(true);
                     signExpanded = true;
                     outline.enabled = false;
                 }
@@ -62,10 +66,12 @@ public class Sign : MonoBehaviour
     public void OnPointerEnter()
     {
         pointerIn = true;
+        AudioManager.Instance.PlayHighlight();
     }
 
     public void OnPointerExit()
     {
         pointerIn = false;
+        AudioManager.Instance.PlayUnhighlight();
     }
 }

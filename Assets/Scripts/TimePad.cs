@@ -39,6 +39,7 @@ public class TimePad : MonoBehaviour
             gameObject.GetComponent<Renderer>().material.color = Color.orange;
             if (!popupDisplayed)
             {
+                AudioManager.Instance.PlayPadActivate();
                 popupDisplayed = true;
                 timeTravelConfirmationMessage.SetActive(true);
                 timeTravelConfirmationMessage.GetComponent<TimeTravelConfirmationMessage>().Setup(era, targetScene);

@@ -29,6 +29,7 @@ public class ParkRanger : MonoBehaviour
             {
                 if (rangerMenu != null)
                 {
+                    AudioManager.Instance.PlayClick();
                     rangerMenu.transform.rotation = Quaternion.LookRotation(rangerMenu.transform.position - Camera.main.transform.position);
                     rangerMenu.SetActive(true);
                     outline.enabled = false;
@@ -52,10 +53,18 @@ public class ParkRanger : MonoBehaviour
     public void OnPointerEnter()
     {
         pointerIn = true;
+        if (!rangerMenu.activeInHierarchy)
+        {
+            AudioManager.Instance.PlayHighlight();
+        }
     }
 
     public void OnPointerExit()
     {
         pointerIn = false;
+        if (!rangerMenu.activeInHierarchy)
+        {
+            AudioManager.Instance.PlayUnhighlight();
+        }
     }
 }

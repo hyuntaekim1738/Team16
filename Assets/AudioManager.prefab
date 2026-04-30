@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &666752640334174176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4077905324277037145}
+  - component: {fileID: 7405252280684848537}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4077905324277037145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666752640334174176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.32874, y: -2.92816, z: -2.15471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7405252280684848537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666752640334174176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 618938caab3154352abfbccb0ac08457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  highlightAudio: {fileID: 8300000, guid: b39a022f787e44142a3685d2883ede90, type: 3}
+  unhighlightAudio: {fileID: 8300000, guid: ede3dc812470d4e44a76ed1d7e5f855c, type: 3}
+  clickAudio: {fileID: 8300000, guid: 76dc4c1c1ed4d4799af97cd5e1c9d5e1, type: 3}
+  padActivateAudio: {fileID: 8300000, guid: a4ec245ebdd6a4220803fe6f8ae51624, type: 3}
+  timeTravelAudio: {fileID: 8300000, guid: de8fd748e497949bf901cc6684d9fc91, type: 3}
+  character: {fileID: 0}
+  grassClips:
+  - {fileID: 8300000, guid: 4c47a7f137cf64cb8af46c4b64ece8aa, type: 3}
+  - {fileID: 8300000, guid: 558632759b5e54d72a9713d8811ff278, type: 3}
+  - {fileID: 8300000, guid: 6816ad6765ed3484f881449e25b6f3cf, type: 3}
+  metalClips:
+  - {fileID: 8300000, guid: 566b0ade5a7e4415ba7eac00ae5beed0, type: 3}
+  - {fileID: 8300000, guid: cc9a0982ba4cf4c5eb48c59382cc8187, type: 3}
+  - {fileID: 8300000, guid: fde3fc48ff07a4f479bc67df82d4fd39, type: 3}

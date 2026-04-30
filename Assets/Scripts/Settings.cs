@@ -60,6 +60,7 @@ public class Settings : MonoBehaviour
         {
             if (vertical > 0.5f && buttonIndex > 0) //up
             {
+                AudioManager.Instance.PlayHighlight();
                 menuButtons[buttonIndex].GetComponent<Image>().color = Color.white;
                 buttonIndex--;
                 menuButtons[buttonIndex].GetComponent<Image>().color = Color.yellow;
@@ -67,6 +68,7 @@ public class Settings : MonoBehaviour
             }
             else if (vertical < -0.5f && buttonIndex < numMenuButtons - 1) // down
             {
+                AudioManager.Instance.PlayHighlight();
                 menuButtons[buttonIndex].GetComponent<Image>().color = Color.white;
                 buttonIndex++;
                 menuButtons[buttonIndex].GetComponent<Image>().color = Color.yellow;
@@ -77,6 +79,7 @@ public class Settings : MonoBehaviour
         //menu selection
         if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
         {
+            AudioManager.Instance.PlayClick();
             string buttonText = menuButtons[buttonIndex].GetComponentInChildren<TMP_Text>().text;
 
             if (string.Equals(buttonText, "Back to Menu"))

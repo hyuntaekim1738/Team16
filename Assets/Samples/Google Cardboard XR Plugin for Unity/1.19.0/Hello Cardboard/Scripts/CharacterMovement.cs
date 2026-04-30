@@ -12,6 +12,10 @@ public class CharacterMovement : MonoBehaviour
     [Tooltip("Should be checked if using the Bluetooth Controller to move. If using keyboard, leave this unchecked.")]
     public bool joyStickMode;
 
+    private float footstepTimer;
+    private float footstepInterval = .75f;
+    private Vector3 lastPosition;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +57,18 @@ public class CharacterMovement : MonoBehaviour
 
         charCntrl.SimpleMove(moveVect);
 
+        bool actuallyMoved = (transform.position - lastPosition).magnitude > .01f;
+        footstepTimer -= Time.deltaTime;
+        if (moveVect.magnitude > 0.1f && actuallyMoved)
+        {
 
+            if (footstepTimer <= 0f)
+            {
+                AudioManager.Instance.PlayFootstep();
+                footstepTimer = footstepInterval;
+            }
+        }
+        lastPosition = transform.position;
     }
 
     public void SetSpeed(float newSpeed)
