@@ -11778,6 +11778,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2279956215585353893, guid: 6ecff606e96324534a598d6174078abc, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2377058135810772412, guid: 6ecff606e96324534a598d6174078abc, type: 3}
       propertyPath: character
       value: 
@@ -11842,6 +11846,10 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 1926121749}
+    - target: {fileID: 7988935500854503135, guid: 6ecff606e96324534a598d6174078abc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7989100608219092190, guid: 6ecff606e96324534a598d6174078abc, type: 3}
       propertyPath: m_RenderMode
       value: 2

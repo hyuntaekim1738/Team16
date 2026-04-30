@@ -15,6 +15,7 @@ public class Animal : MonoBehaviour
     bool isPointerEnter, feeding, feedingDone = false;
     public static bool isMenuOpen = false;
     public static int foodNum = 0;
+    float dis;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,7 +26,7 @@ public class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // dis = Vector3.Distance(character.transform.position, transform.position);
+        dis = Vector3.Distance(character.transform.position, transform.position);
         feeding = foodPickUp();
         feedingDone = getFeedFood();
         // feedingDoneL = getFeedFoodL();
@@ -70,8 +71,8 @@ public class Animal : MonoBehaviour
 
     public void OnPointerEnter()
     {
-        if(!isMenuOpen || animalMenuClosed())
-            // if(dis <= 7.0f)
+        if(!isMenuOpen && !isMenuOpenL || animalMenuClosed())
+            if(dis <= 7.5f)
                 isPointerEnter = true;
     }
 
