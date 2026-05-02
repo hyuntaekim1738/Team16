@@ -4037,6 +4037,8 @@ GameObject:
   - component: {fileID: 627438713699412129}
   - component: {fileID: 703438530545393439}
   - component: {fileID: 7730436614611075046}
+  - component: {fileID: 5258808695635659160}
+  - component: {fileID: 2736715384960624558}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -4174,6 +4176,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60df1d83214e49ecb4569c2c918cb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalMenu
+--- !u!65 &5258808695635659160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988935500854503135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 536.3849, y: 230.77496, z: 10.622925}
+  m_Center: {x: 0.24758835, y: 38.06337, z: -4.8108788}
+--- !u!65 &2736715384960624558
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988935500854503135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 800.6858, y: 282.31094, z: 7.560023}
+  m_Center: {x: -9.710117, y: -275.76093, z: -3.2820435}
 --- !u!1 &8049136168937662558
 GameObject:
   m_ObjectHideFlags: 0

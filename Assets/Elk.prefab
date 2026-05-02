@@ -672,6 +672,8 @@ GameObject:
   - component: {fileID: 2191515327272137515}
   - component: {fileID: 4123640240460117326}
   - component: {fileID: 3640104686008937213}
+  - component: {fileID: 5592360415708630539}
+  - component: {fileID: 365843154879472520}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -809,6 +811,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60df1d83214e49ecb4569c2c918cb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimalMenu
+--- !u!65 &5592360415708630539
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581495543417001905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 536.3849, y: 230.77496, z: 10.622925}
+  m_Center: {x: 0.24758835, y: 38.06337, z: -4.8108788}
+--- !u!65 &365843154879472520
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5581495543417001905}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 800.6858, y: 282.31094, z: 7.560023}
+  m_Center: {x: -9.710117, y: -275.76093, z: -3.2820435}
 --- !u!1 &5816836609912546453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1763,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a3c28f9a2973e4654acd67d147516a93, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimalBuffalo
+  m_EditorClassIdentifier: '::'
   menu: {fileID: 5581495543417001905}
   character: {fileID: 0}
   camera: {fileID: 0}
