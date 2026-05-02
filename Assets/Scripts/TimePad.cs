@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class TimePad : MonoBehaviour
 {
-    private float detectionRadius = .5f;
+    private float detectionRadius = .55f;
     private bool popupDisplayed = false;
 
     public bool isCurrentEra;

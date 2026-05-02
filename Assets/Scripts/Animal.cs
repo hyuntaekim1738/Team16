@@ -73,11 +73,19 @@ public class Animal : MonoBehaviour
     {
         if(!isMenuOpen && !isMenuOpenL || animalMenuClosed())
             if(dis <= 7.5f)
+            {
                 isPointerEnter = true;
+                AudioManager.Instance.PlayHighlight();
+            }
+                
     }
 
     public void OnPointerExit()
     {
+        if (gameObject.GetComponent<Outline>().enabled)
+        {
+            AudioManager.Instance.PlayUnhighlight();
+        }
         isPointerEnter = false;
     }
 }
