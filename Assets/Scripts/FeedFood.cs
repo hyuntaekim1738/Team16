@@ -24,6 +24,7 @@ public class FeedFood : MonoBehaviour
                 if (Input.GetButtonDown("js1"))
                 {
                     feeding = true;
+                    AudioManager.Instance.PlayFeed();
                     // menu.SetActive(false);
                     foodNum --;
                     gameObject.SetActive(false);

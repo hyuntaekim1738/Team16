@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip clickAudio;
     public AudioClip padActivateAudio;
     public AudioClip timeTravelAudio;
+    public AudioClip feedAudio;
     //footsteps
     public Transform character;
     public AudioClip[] grassClips; //soft surface
@@ -32,6 +33,7 @@ public class AudioManager : MonoBehaviour
     public void PlayClick() => _source.PlayOneShot(clickAudio);
     public void PlayPadActivate() => _source.PlayOneShot(padActivateAudio);
     public void PlayTimeTravel() => _source.PlayOneShot(timeTravelAudio);
+    public void PlayFeed() => _source.PlayOneShot(feedAudio);
 
     public void PlayFootstep()
     {

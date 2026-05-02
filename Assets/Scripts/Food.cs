@@ -24,6 +24,7 @@ public class Food : MonoBehaviour
             if (Input.GetButtonDown("js1"))
             {
                 // setFeedFood(true);
+                AudioManager.Instance.PlayClick();
                 foodPickedUp = true;
                 foodNum++;
                 camGameObject.SetActive(true);
@@ -42,11 +43,13 @@ public class Food : MonoBehaviour
 
     public void OnPointerEnter()
     {
+        AudioManager.Instance.PlayHighlight();
         isPointerEnter = true;
     }
 
     public void OnPointerExit()
     {
+        AudioManager.Instance.PlayUnhighlight();
         isPointerEnter = false;
     }
 }
