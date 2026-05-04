@@ -250,9 +250,10 @@ public class RangerMenuUI : MonoBehaviour
         if (questionInput == null || responseText == null)
             return;
 
-        if (string.IsNullOrWhiteSpace(spokenText))
+        if (string.IsNullOrWhiteSpace(spokenText) ||
+            spokenText.StartsWith("Error"))
         {
-            responseText.text = "I didn't catch that. Please try again.";
+            responseText.text = "Sorry, try again.";
             return;
         }
 

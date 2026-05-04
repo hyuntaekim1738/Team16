@@ -1938,6 +1938,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParkRanger
   rangerMenu: {fileID: 6778505242933915827}
+  player: {fileID: 0}
+  interactDistance: 3.5
 --- !u!114 &7185981205624205943
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3917,7 +3919,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6778505242933915827}
-  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 2.5}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
@@ -4449,6 +4451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParkRanger
   rangerMenu: {fileID: 6778505242933915827}
+  player: {fileID: 0}
+  interactDistance: 3.5
 --- !u!136 &8592514402455769892
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -6057,6 +6061,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParkRanger
   rangerMenu: {fileID: 6778505242933915827}
+  player: {fileID: 0}
+  interactDistance: 3.5
 --- !u!136 &3238779259966034622
 CapsuleCollider:
   m_ObjectHideFlags: 0

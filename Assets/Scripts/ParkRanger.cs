@@ -7,7 +7,7 @@ public class ParkRanger : MonoBehaviour
 
     public GameObject rangerMenu;
     public Transform player;
-    public float interactDistance = 3.5f;
+    public float interactDistance = 5f;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class ParkRanger : MonoBehaviour
             {
                 if (rangerMenu != null && player != null)
                 {
-                    float distance = Vector3.Distance(player.position, transform.position);
+                    float distance = Vector3.Distance(player.position, transform.root.position);
 
                     if (distance > interactDistance)
                     {
@@ -43,7 +43,7 @@ public class ParkRanger : MonoBehaviour
 
                     Vector3 direction = Camera.main.transform.position - rangerMenu.transform.position;
                     direction.y = 0;
-                    rangerMenu.transform.rotation = Quaternion.LookRotation(direction);
+                    //rangerMenu.transform.rotation = Quaternion.LookRotation(direction);
 
                     rangerMenu.SetActive(true);
                     outline.enabled = false;
