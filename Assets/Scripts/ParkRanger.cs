@@ -6,6 +6,8 @@ public class ParkRanger : MonoBehaviour
     private bool pointerIn;
 
     public GameObject rangerMenu;
+    public Transform player;
+    public float interactDistance = 3.5f;
 
     void Start()
     {
@@ -27,10 +29,22 @@ public class ParkRanger : MonoBehaviour
 
             if (Input.GetButtonDown("js1") || Input.GetKeyDown(KeyCode.B))
             {
-                if (rangerMenu != null)
+                if (rangerMenu != null && player != null)
                 {
+                    float distance = Vector3.Distance(player.position, transform.position);
+
+                    if (distance > interactDistance)
+                    {
+                        Debug.Log("Too far from ranger to interact");
+                        return;
+                    }
+
                     AudioManager.Instance.PlayClick();
-                    rangerMenu.transform.rotation = Quaternion.LookRotation(rangerMenu.transform.position - Camera.main.transform.position);
+
+                    Vector3 direction = Camera.main.transform.position - rangerMenu.transform.position;
+                    direction.y = 0;
+                    rangerMenu.transform.rotation = Quaternion.LookRotation(direction);
+
                     rangerMenu.SetActive(true);
                     outline.enabled = false;
                 }
