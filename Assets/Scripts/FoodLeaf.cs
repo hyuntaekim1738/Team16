@@ -23,6 +23,7 @@ public class FoodLeaf : MonoBehaviour
             if (Input.GetButtonDown("js1"))
             {
                 // setFeedFood(true);
+                AudioManager.Instance.PlayClick();
                 foodPickedUp = true;
                 foodLeafNum ++;
                 camGameObject.SetActive(true);
@@ -41,11 +42,13 @@ public class FoodLeaf : MonoBehaviour
 
     public void OnPointerEnter()
     {
+        AudioManager.Instance.PlayHighlight();
         isPointerEnter = true;
     }
 
     public void OnPointerExit()
     {
+        AudioManager.Instance.PlayUnhighlight();
         isPointerEnter = false;
     }
 }

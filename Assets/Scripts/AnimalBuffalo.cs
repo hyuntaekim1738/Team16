@@ -68,12 +68,19 @@ public class AnimalBuffalo : MonoBehaviour
     public void OnPointerEnter()
     {
         if(!isMenuOpenL && !isMenuOpen)
-            if(dis <= 7.5f)
+            if (dis <= 7.5f)
+            {
                 isPointerEnter = true;
+                AudioManager.Instance.PlayHighlight();
+            }
     }
 
     public void OnPointerExit()
     {
+        if (gameObject.GetComponent<Outline>().enabled)
+        {
+            AudioManager.Instance.PlayUnhighlight();
+        }
         isPointerEnter = false;
     }
 }

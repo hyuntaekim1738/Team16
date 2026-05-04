@@ -40,7 +40,7 @@ One of the options is "Custom Question". If that option is selected, a button ca
 To close the menu, simply select the "exit" option.
 ### Animals
 There are animal objects located around the park that the users can interact with.  
-To interact with the animals, aim the reticle pointer at the animal and press "B". This will open a panel containing information about the animal. User movement will be disabled while the panel is open. To close the menu, aim the reticle pointer at the close button and press "B".
+To interact with the animals, get close to the animal, aim the reticle pointer at the animal and press "B". This will open a panel containing information about the animal. User movement will be disabled while the panel is open. To close the menu, aim the reticle pointer at the close button and press "B".
 ### Animal Food
 There are bins containing animal food (steak and leaf) in the park. This food can be fed to the animals.  
 To interact with the food, aim the reticle pointer at the food and press "B". The food will disappear and reappear anchored to the user camera. To feed the animal with this food, aim the reticle pointer at the animal that the food is meant for and press "B". The food will disappear. 

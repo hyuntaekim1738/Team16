@@ -24,6 +24,7 @@ public class FeedFoodLeaf : MonoBehaviour
             {
                 if (Input.GetButtonDown("js1"))
                 {
+                    AudioManager.Instance.PlayFeed();
                     feeding = true;
                     foodLeafNum --;
                     gameObject.SetActive(false);
