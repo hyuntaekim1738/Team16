@@ -1,5 +1,5 @@
 # Team 16 Project - Yellowstone Wildlife Museum
-This project is a VR museum containing interactions and information about the history of Yellowstone National Park. It is currently in its prototype stage. All basic features have been implemented, 1 advanced feature implemented, and 2/4 eras created.
+This project is a VR museum containing interactions and information about the history of Yellowstone National Park.
 ## Relevant Scenes
 The project is contained in the scenes:
 - startScene.unity
